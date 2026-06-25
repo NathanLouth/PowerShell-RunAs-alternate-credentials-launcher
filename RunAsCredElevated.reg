@@ -5,4 +5,4 @@ Windows Registry Editor Version 5.00
 "HasLUAShield"=""
 
 [HKEY_CLASSES_ROOT\*\shell\RunAsCredElevated\command]
-@="powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"& { param($File); $Credential = Get-Credential; Start-Process powershell.exe -Credential $Credential -WorkingDirectory 'C:\\' -ArgumentList \\\"-NoProfile Start-Process '$($File)' -Verb RunAs \\\" }\" \\\"%1\\\""
+@="powershell.exe -NoProfile -Command \"& { param($File); $Credential = Get-Credential; Start-Process powershell.exe -Credential $Credential -WorkingDirectory 'C:\\' -ArgumentList \\\"-NoProfile Start-Process '$($File)' -Verb RunAs \\\" }\" \\\"%1\\\""
