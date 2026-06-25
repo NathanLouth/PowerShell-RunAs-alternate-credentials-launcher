@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\RunAsCredElevated]
+@="Run as Different User (Elevated)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\*\shell\RunAsCredElevated\command]
+@="powershell.exe -ExecutionPolicy Bypass -Command \"& { param($File); $Credential = Get-Credential; Start-Process powershell.exe -Credential $Credential -WorkingDirectory 'C:\\' -ArgumentList \\\"Start-Process `\\\"$File`\\\" -Verb RunAs \\\" }\" \"%1\""
