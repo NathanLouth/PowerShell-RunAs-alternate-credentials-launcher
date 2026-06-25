@@ -1,1 +1,1 @@
-powershell.exe -ExecutionPolicy Bypass -Command "& { param($File); $Credential = Get-Credential; Start-Process powershell.exe -Credential $Credential -WorkingDirectory 'C:\' -ArgumentList \"Start-Process `\"$File`\"\"}" "%1"
+powershell.exe -ExecutionPolicy Bypass -Command "& { param($File); $Credential = Get-Credential; Start-Process powershell.exe -Credential $Credential -WorkingDirectory 'C:\' -ArgumentList \"Start-Process `\"$File`\" -Verb RunAs \"}" "%1"
